@@ -26,4 +26,15 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Squirrel> squirrels = sl.asArrayList();
 
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        try {
+            Thread.sleep(1000 * 20);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        return;
+    }
 }
